@@ -109,6 +109,9 @@ main:
 ;that upper bit is useless, as usual, so I marked it with a dash -
 	lda #2 ;sprite tiles at $4000
 	sta spr_addr_size ;= $2101
+	
+	lda #1 ; mode 1, tilesize 8x8 all
+	sta bg_size_mode ; $2105
 
 ;allow sprites on the main screen	
 	lda #SPR_ON ; $10, only show sprites
